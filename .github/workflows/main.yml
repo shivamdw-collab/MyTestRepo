@@ -3,7 +3,7 @@ name: Dummy Test Workflow
 # This allows the workflow to be triggered by pushing a commit OR manually clicking a button
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "main", "master","test" ]
   workflow_dispatch:
 
 jobs:
