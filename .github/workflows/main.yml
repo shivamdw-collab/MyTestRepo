@@ -1,14 +1,13 @@
-name: Dummy Test Workflow
-
-# This allows the workflow to be triggered by pushing a commit OR manually clicking a button
 on:
   push:
-    branches: [ "main", "master","test5" ]
+    branches: [ "main", "test" ]
   workflow_dispatch:
+
+concurrency: my-queue-lock  # <--- This forces runs to wait in line
 
 jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a simple echo
-        run: echo "This is a dummy workflow for testing the Google Chat bot!"
+      - name: Sleep for 2 minutes
+        run: sleep 120    # <--- This keeps the runner busy
