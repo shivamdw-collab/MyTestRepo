@@ -1,12 +1,6 @@
-on:
-  push:
-    branches: [ "main", "test" ]
-  workflow_dispatch:
-
-
+on: [push, workflow_dispatch]
 jobs:
-  test-job:
+  fast-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Sleep for 2 minutes
-        run: sleep 120    # <--- This keeps the runner busy
+      - run: exit 0  # This instantly succeeds
