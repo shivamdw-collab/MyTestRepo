@@ -1,0 +1,14 @@
+name: Dummy Test Workflow
+
+# This allows the workflow to be triggered by pushing a commit OR manually clicking a button
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a simple echo
+        run: echo "This is a dummy workflow for testing the Google Chat bot!"
