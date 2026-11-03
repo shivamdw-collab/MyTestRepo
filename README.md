@@ -1,2 +1,2 @@
 # MyTestRepo
-this is testing of workflow in flow 6
+this is testing of workflow in flow
