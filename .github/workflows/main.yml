@@ -7,3 +7,6 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-latest
+    steps:
+      - name: Sleep for 2 minutes
+        run: sleep 120    # <--- This keeps the runner busy
